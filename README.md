@@ -32,7 +32,7 @@ note: returns "ok:true" if the result is reached, else msg or error
 <hr width="70%" color="blue" noshade>
 
 > **for post:**  
-> request to -> api/Preproccess/post-create - requirement data {userid, title, content}  
+> request to -> api/preproccess/post-create - requirement data {userid, title, content}  
 > request to -> api/post/post-delete - requirement data {postid}  
 > request to -> api/post/post-update - requirement data {postid, title, content}  
 > request to -> api/post/like-post - requirement data {userid, postid}
