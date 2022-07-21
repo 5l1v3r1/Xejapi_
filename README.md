@@ -35,19 +35,23 @@ note: returns "ok:true" if the result is reached, else msg or error
 > **for replycomment:**  
 > request to -> api/recomment/recomment-create - requirement data {userid, replied\_commentid, content}  
 > request to -> api/recomment/recomment-delete - requirement data {recommentid}
+<hr width="70%" color="blue" noshade>
 
 > **for notification:**  
 > request to -> api/preproccess/notification-create - requirement data {sourceID, affectedID, type, redirectID, has\_it\_been\_read}  
 > type parameter can take those (like\_post, recomment, follow). For example, like\_post is equal to the string of 'x user liked your post'  
 > request to -> api/notification/notification-delete - requirement data {notificationid}  
 > request to -> api/notification/notification-update - requirement data {notificationid}
+<hr width="70%" color="blue" noshade>
 
 > **for follow, block, etc:**  
 > request to -> api/preproccess/block-user - requirement data {blockingID, blockedUserID}  
 > request to -> api/preproccess/follow-user - requirement data {followingID, followedUserID}
+<hr width="70%" color="blue" noshade>
 
 > **How we can get data in db:**  
 > request to -> api/get-data/get-db - requirement data {table\_name} = which are you want info of table write it name
+<hr width="70%" color="blue" noshade>
 
 > **these specific queries using for getting specific any data:**  
 > id = table self id  
@@ -59,3 +63,4 @@ note: returns "ok:true" if the result is reached, else msg or error
 > request to -> api/get-data/get-posts - requirement data {userid or id}  
 > request to -> api/get-data/get-comments - requirement data {userid or id}  
 > request to -> api/get-data/get-recomments - requirement data {userid or id}
+<hr width="70%" color="blue" noshade>
