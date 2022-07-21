@@ -1,4 +1,7 @@
-export interface Register {
+ 
+
+export interface Register 
+{
     username: string,
     email: any,
     password: any,
@@ -6,34 +9,62 @@ export interface Register {
 };
 
 
-export interface Login {
+export interface Login 
+{
     username: string,
     password: string,
 
 }
 
-export interface Post {
+export interface Post 
+{
     userid: number,
     title: any,
     content: any
-
-
 }
 
-export interface Comment {
+export interface Comment 
+{
     userid: number,
     postid: number,
     content: string,
     date: any
 }
-export interface Reply_comment {
+export interface Reply_comment 
+{
     userid: number,
     replied_commentid: number,
     content: string,
 
 }
-export interface Like {
+export interface Like 
+{
     userid: number,
     postid: number,
-    _like: number
+    //_like: number
 }
+
+export interface Follow_user 
+{
+    followingID: number,
+    followedUserID: number
+
+}
+
+export interface Block_user 
+{
+    blockingID: number,
+    blockedUserID: number
+}
+
+export interface Notification 
+{
+        sourceID: number, 
+        affectedID: number,
+        type: string,
+        redirectID: number,
+        has_it_been_read: boolean,
+
+}
+
+ 
