@@ -14,10 +14,12 @@ Upload a photo, _and with its subproccess_
 **how to will we use:**  
 note: returns "ok:true" if the result is reached, else msg or error
 
-**FOR TEST**
+**FOR TEST:**
+
 ![image](https://user-images.githubusercontent.com/74791506/180266722-4bab41de-b854-4f0b-99ac-9a233818e788.png)
 
-**RESPONSE**
+**RESPONSE:**
+
 ![image](https://user-images.githubusercontent.com/74791506/180266762-f1d62c3d-4b27-4e9d-b2c1-2ea19d079a9c.png)
 
 > **for register:**  
