@@ -8,7 +8,8 @@ Comment,
 Reply comment,  
 Like,  
 Follow,  
-Block,  
+Block, 
+Notification,
 Upload a photo, _and with its subproccess_
 
 **how to will we use:**  
