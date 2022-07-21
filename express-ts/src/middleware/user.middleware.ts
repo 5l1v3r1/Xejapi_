@@ -3,8 +3,11 @@ const { json } = require('express');
 const jwt = require('jsonwebtoken');
 const jwt_decode = require('jwt-decode');
 
+// i don't needed
 
 
+
+/*
 export const requireAuth = (req: Request, res: Response, next: NextFunction) => {
 
     let token = JSON.stringify(req.cookies.token)
@@ -41,5 +44,5 @@ export const getCurrentUser = (req: Request, res: Response, next: NextFunction) 
         return next();
     }
 };
-
+*/
 

@@ -1,11 +1,9 @@
 import e, { Request, Response, NextFunction, Application, request, response } from 'express';
 import * as utils from '../utils/utils';
 import * as types from '../selftypes/types';
-import jwt, { Secret, JwtPayload } from 'jsonwebtoken';
 import fs, { access, constants } from 'fs';
 import multer from 'multer';
 import {upload} from '../config'
-import { file } from 'googleapis/build/src/apis/file';
 
  
 class All_Proccess {
@@ -59,9 +57,7 @@ class All_Proccess {
 
             if (result[0]) 
             {
-                let payload: any = { user_id: result[0] };
-                let token = jwt.sign(payload, req.app.get('SECRET_KEY'), { expiresIn: 31556952000 })
-                res.status(200).json({ ok: true, result, token: token });
+                res.status(200).json({ ok: true, result  });
                 return next();
             }
 

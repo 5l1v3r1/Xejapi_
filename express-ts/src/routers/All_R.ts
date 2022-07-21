@@ -13,13 +13,12 @@ export const NotificationRoute: Router = express.Router();
 Preproccess.use(express.json());
 Preproccess.use(express.urlencoded({ extended: true }));
 
-import All_Proccess from '../controllers/AllProccess';
-import Notification_sub_Proccess from '../controllers/Notification_C';
+import GetDb_c from '../controllers/GetDb_c';
 import Post_sub_proccess from '../controllers/Post_C';
+import All_Proccess from '../controllers/AllProccess_C';
 import Comment_sub_proccess from '../controllers/Comment_C';
 import Recomment_sub_proccess from '../controllers/Recomment_C';
-import * as  midwares from '../middleware/user.middleware';
-import GetDb_c from '../controllers/GetDb_c';
+import Notification_sub_Proccess from '../controllers/Notification_C';
 
 // full-proccess
 
@@ -29,7 +28,7 @@ Preproccess.post('/update-photo', All_Proccess.profile_photo, (req: Request, res
 Preproccess.post('/follow-user', All_Proccess.follow_proccess, (req: Request, res: Response) => { });
 Preproccess.post('/block-user', All_Proccess.block_proccess, (req: Request, res: Response) => { });
 Preproccess.post('/notification-create', All_Proccess.notification, (req: Request, res: Response) => { });
-Preproccess.post('/post-create', All_Proccess.post_create, midwares.requireAuth, (req: Request, res: Response) => { });
+Preproccess.post('/post-create', All_Proccess.post_create,   (req: Request, res: Response) => { });
 Preproccess.post('/comment-create', All_Proccess.comment_create, (req: Request, res: Response) => { });
 Preproccess.post('/recomment-create', All_Proccess.create_recomment, (req: Request, res: Response) => { });
 
@@ -38,8 +37,8 @@ NotificationRoute.post('/notification-delete', Notification_sub_Proccess.notific
 NotificationRoute.post('/notification-update', Notification_sub_Proccess.notification_update, (req: Request, res: Response) => { });
 
 // post
-PostRoute.post('/post-delete', Post_sub_proccess.post_delete, midwares.requireAuth, (req: Request, res: Response) => { });
-PostRoute.post('/post-update', Post_sub_proccess.post_update, midwares.requireAuth, (req: Request, res: Response) => { });
+PostRoute.post('/post-delete', Post_sub_proccess.post_delete,   (req: Request, res: Response) => { });
+PostRoute.post('/post-update', Post_sub_proccess.post_update,   (req: Request, res: Response) => { });
 
 // comment
 CommentRoute.post('/comment-delete', Comment_sub_proccess.comment_delete, (req: Request, res: Response) => { });
