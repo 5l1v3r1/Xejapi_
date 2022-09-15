@@ -1,6 +1,6 @@
-> ### HEY IF YOU SEE ANY ERROR PLEASE SAY ME
+> ### HEY IF YOU SEE ANY ERROR PLEASE SAY TO ME
 
-My api contain those, for now:  
+My api contains those, for now:  
 Login,  
 Register,  
 Post,  
